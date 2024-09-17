@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/producto")
+@RequestMapping("${api-endpoint}/productos")
 public class ProductoController {
 
     @Autowired

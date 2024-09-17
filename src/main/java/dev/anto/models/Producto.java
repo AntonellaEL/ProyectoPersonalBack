@@ -19,6 +19,8 @@ public class Producto {
     protected String pasillo;
     protected String estanteria;
 
+    public Producto(){}
+
     public Producto(Long id, String nombre, double precio, String material, String categoria, String subcategoria,
             String pasillo, String estanteria) {
         this.id = id;
