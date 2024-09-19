@@ -13,24 +13,26 @@ public class Producto {
 
     protected String nombre;
     protected double precio;
-    protected String material;
+    protected String descripcion;
     protected String categoria;
     protected String subcategoria;
     protected String pasillo;
     protected String estanteria;
+    protected String img;
 
     public Producto(){}
 
-    public Producto(Long id, String nombre, double precio, String material, String categoria, String subcategoria,
-            String pasillo, String estanteria) {
+    public Producto(Long id, String nombre, double precio, String descripcion, String categoria, String subcategoria,
+            String pasillo, String estanteria, String img) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
-        this.material = material;
+        this.descripcion = descripcion;
         this.categoria = categoria;
         this.subcategoria = subcategoria;
         this.pasillo = pasillo;
         this.estanteria = estanteria;
+        this.img = img;
     }
 
     public Long getId() {
@@ -57,12 +59,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String getMaterial() {
-        return material;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getCategoria() {
@@ -97,6 +99,12 @@ public class Producto {
         this.estanteria = estanteria;
     }
 
-    
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
 }
