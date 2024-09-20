@@ -11,7 +11,7 @@ INSERT INTO roles_users (role_id, user_id) VALUES (1, 1);
 -- Pasillo 1: Artículos de Cocina
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Olla a Presión', 80.00, 'Olla a presión de acero inoxidable', 'Cocina', 'Utensilios', '1', '1', 'olla_presion.jpg'),
+    ('Olla a Presión', 80.00, 'Olla a presión de acero inoxidable', 'Cocina', 'Utensilios', '1', '1', 'https://cdn.pixabay.com/photo/2014/12/02/14/50/pot-554068_1280.jpg'),
     ('Set de Cucharas', 15.99, 'Set de 6 cucharas de acero inoxidable', 'Cocina', 'Cubiertos', '1', '2', 'cucharas.jpg'),
     ('Plato de Cerámica', 12.50, 'Plato de cerámica blanco', 'Cocina', 'Platos', '1', '3', 'plato_ceramica.jpg'),
     ('Tupperware Set', 25.00, 'Set de 4 recipientes herméticos', 'Cocina', 'Recipientes', '1', '4', 'tupperware.jpg'),
@@ -35,7 +35,7 @@ VALUES
 -- Pasillo 2: Electricidad
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Enchufe Multiplicador', 10.00, 'Enchufe multiplicador con 4 tomas', 'Electricidad', 'Enchufes', '2', '1', 'enchufe_multiplicador.jpg'),
+    ('Enchufe Multiplicador', 10.00, 'Enchufe multiplicador con 4 tomas', 'Electricidad', 'Enchufes', '2', '1', 'https://cdn.pixabay.com/photo/2015/12/07/10/55/electric-1080584_1280.jpg'),
     ('Alargador de 5m', 15.00, 'Alargador de 5 metros con protección', 'Electricidad', 'Alargadores', '2', '2', 'alargador_5m.jpg'),
     ('Bombilla LED', 7.99, 'Bombilla LED de 10W', 'Electricidad', 'Bombillas', '2', '3', 'bombilla_led.jpg'),
     ('Regleta de Enchufes', 12.00, 'Regleta de 6 enchufes con protección', 'Electricidad', 'Regletas', '2', '4', 'regleta_enchufes.jpg'),
@@ -59,7 +59,7 @@ VALUES
 -- Pasillo 3: Mascotas
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Juguete para Perro', 12.00, 'Juguete de caucho para perros grandes', 'Mascotas', 'Juguetes', '3', '1', 'juguete_perro.jpg'),
+    ('Juguete para Perro', 12.00, 'Juguete de caucho para perros grandes', 'Mascotas', 'Juguetes', '3', '1', 'https://cdn.pixabay.com/photo/2018/10/01/09/21/pets-3715733_1280.jpg'),
     ('Jaula para Gato', 75.00, 'Jaula para gato con varios niveles', 'Mascotas', 'Jaulas', '3', '2', 'jaula_gato.jpg'),
     ('Cama para Perro', 50.00, 'Cama ortopédica para perros grandes', 'Mascotas', 'Camas', '3', '3', 'cama_perro.jpg'),
     ('Rascador para Gato', 30.00, 'Rascador alto para gatos', 'Mascotas', 'Rascadores', '3', '4', 'rascador_gato.jpg'),
@@ -83,7 +83,7 @@ VALUES
 -- Pasillo 4: Material Escolar
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Libreta de Notas', 3.50, 'Libreta con hojas rayadas', 'Escolar', 'Libretas', '4', '1', 'libreta_notas.jpg'),
+    ('Libreta de Notas', 3.50, 'Libreta con hojas rayadas', 'Escolar', 'Libretas', '4', '1', 'https://cdn.pixabay.com/photo/2016/09/26/09/59/school-supplies-1695564_1280.jpg'),
     ('Bolígrafo Azul', 1.00, 'Bolígrafo azul de tinta rápida', 'Escolar', 'Escritura', '4', '2', 'boligrafo_azul.jpg'),
     ('Lápiz HB', 0.50, 'Lápiz HB con goma', 'Escolar', 'Escritura', '4', '3', 'lapiz_hb.jpg'),
     ('Marcadores de Colores', 5.00, 'Set de 12 marcadores de colores', 'Escolar', 'Marcadores', '4', '4', 'marcadores.jpg'),
@@ -107,7 +107,7 @@ VALUES
 -- Pasillo 5: Juguetes
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Pelota de Fútbol', 20.00, 'Pelota de fútbol tamaño estándar, para 6 años en adelante', 'Juguetes', 'Pelotas', '5', '1', 'pelota_futbol.jpg'),
+    ('Pelota de Fútbol', 20.00, 'Pelota de fútbol tamaño estándar, para 6 años en adelante', 'Juguetes', 'Pelotas', '5', '1', 'https://cdn.pixabay.com/photo/2015/04/04/04/27/toys-706162_1280.jpg'),
     ('Muñeca de Tela', 15.00, 'Muñeca de tela para niños de 3 a 6 años', 'Juguetes', 'Muñecas', '5', '2', 'muneca_tela.jpg'),
     ('Construcción de Bloques', 30.00, 'Juego de bloques de construcción para niños de 4 a 8 años', 'Juguetes', 'Construcción', '5', '3', 'bloques_construccion.jpg'),
     ('Triciclo', 60.00, 'Triciclo para niños de 2 a 5 años', 'Juguetes', 'Vehículos', '5', '4', 'triciclo.jpg'),
@@ -131,7 +131,7 @@ VALUES
 -- Pasillo 6: Lanas
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Lana de Color Rojo', 5.00, 'Lana de color rojo, 100g', 'Lanas', 'Colores', '6', '1', 'lana_rojo.jpg'),
+    ('Lana de Color Rojo', 5.00, 'Lana de color rojo, 100g', 'Lanas', 'Colores', '6', '1', 'https://cdn.pixabay.com/photo/2016/03/15/15/24/wool-1258500_1280.jpg'),
     ('Lana de Color Azul', 5.00, 'Lana de color azul, 100g', 'Lanas', 'Colores', '6', '2', 'lana_azul.jpg'),
     ('Lana de Color Verde', 5.00, 'Lana de color verde, 100g', 'Lanas', 'Colores', '6', '3', 'lana_verde.jpg'),
     ('Lana de Color Amarillo', 5.00, 'Lana de color amarillo, 100g', 'Lanas', 'Colores', '6', '4', 'lana_amarillo.jpg'),
@@ -155,7 +155,7 @@ VALUES
 -- Pasillo 7: Textil Hogar
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Cortina para Sala', 35.00, 'Cortina de sala de 200x250 cm', 'Textil Hogar', 'Cortinas', '7', '1', 'cortina_sala.jpg'),
+    ('Cortina para Sala', 35.00, 'Cortina de sala de 200x250 cm', 'Textil Hogar', 'Cortinas', '7', '1', 'https://cdn.pixabay.com/photo/2017/07/31/23/32/window-2562006_1280.jpg'),
     ('Mantel de Tela', 20.00, 'Mantel de tela para mesa de 140x180 cm', 'Textil Hogar', 'Manteles', '7', '2', 'mantel_tela.jpg'),
     ('Juego de Sábanas', 40.00, 'Juego de sábanas de 2 piezas, tamaño King', 'Textil Hogar', 'Sábanas', '7', '3', 'sabanas_king.jpg'),
     ('Cortina para Baño', 15.00, 'Cortina de baño con diseño', 'Textil Hogar', 'Cortinas', '7', '4', 'cortina_bano.jpg'),
@@ -179,7 +179,7 @@ VALUES
 -- Pasillo 8: Herramientas
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Martillo de Carpintero', 12.00, 'Martillo de carpintero de acero', 'Herramientas', 'Martillos', '8', '1', 'martillo.jpg'),
+    ('Martillo de Carpintero', 12.00, 'Martillo de carpintero de acero', 'Herramientas', 'Martillos', '8', '1', 'https://cdn.pixabay.com/photo/2014/09/19/09/54/hammer-451987_1280.jpg'),
     ('Destornillador Phillips', 8.00, 'Destornillador Phillips de 6 pulgadas', 'Herramientas', 'Destornilladores', '8', '2', 'destornillador_phillips.jpg'),
     ('Alicates de Corte', 10.00, 'Alicates de corte con mango antideslizante', 'Herramientas', 'Alicates', '8', '3', 'alicates_corte.jpg'),
     ('Cinta Métrica', 5.00, 'Cinta métrica de 5 metros', 'Herramientas', 'Medición', '8', '4', 'cinta_metrica.jpg'),
@@ -203,7 +203,7 @@ VALUES
 -- Pasillo 9: Artículos de Limpieza
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Escoba de Cerdas', 15.00, 'Escoba de cerdas para barrer', 'Limpieza', 'Escobas', '9', '1', 'escoba_cerdas.jpg'),
+    ('Escoba de Cerdas', 15.00, 'Escoba de cerdas para barrer', 'Limpieza', 'Escobas', '9', '1', 'https://cdn.pixabay.com/photo/2016/11/19/00/17/broom-1837434_1280.jpg'),
     ('Mopa de Microfibra', 20.00, 'Mopa de microfibra con mango ajustable', 'Limpieza', 'Mopas', '9', '2', 'mopa_microfibra.jpg'),
     ('Cubo de Fregona', 18.00, 'Cubo de fregona con exprimidor', 'Limpieza', 'Cubos', '9', '3', 'cubo_fregona.jpg'),
     ('Detergente Multiuso', 8.00, 'Detergente multiuso para diversas superficies', 'Limpieza', 'Detergentes', '9', '4', 'detergente_multiuso.jpg'),
@@ -227,7 +227,7 @@ VALUES
 -- Pasillo 10: Disfraces
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Disfraz de Superhéroe', 40.00, 'Disfraz de superhéroe para adultos', 'Disfraces', 'Adultos', '10', '1', 'disfraz_superheroe.jpg'),
+    ('Disfraz de Superhéroe', 40.00, 'Disfraz de superhéroe para adultos', 'Disfraces', 'Adultos', '10', '1', 'https://cdn.pixabay.com/photo/2017/04/01/22/23/mar-di-gras-2194595_1280.jpg'),
     ('Disfraz de Princesa', 35.00, 'Disfraz de princesa para niñas', 'Disfraces', 'Niños', '10', '2', 'disfraz_princesa.jpg'),
     ('Disfraz de Pirata', 45.00, 'Disfraz de pirata para adultos', 'Disfraces', 'Adultos', '10', '3', 'disfraz_pirata.jpg'),
     ('Disfraz de Dinosaurio', 30.00, 'Disfraz de dinosaurio para niños', 'Disfraces', 'Niños', '10', '4', 'disfraz_dinosaurio.jpg'),
@@ -251,7 +251,7 @@ VALUES
 -- Pasillo 11: Artículos para Cumpleaños
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
-    ('Vela de Cumpleaños Número 1', 2.00, 'Vela de cumpleaños número 1 de color rojo', 'Cumpleaños', 'Velas', '11', '1', 'vela_numero_1.jpg'),
+    ('Vela de Cumpleaños Número 1', 2.00, 'Vela de cumpleaños número 1 de color rojo', 'Cumpleaños', 'Velas', '11', '1', 'https://cdn.pixabay.com/photo/2016/03/26/22/13/candlelights-1281563_1280.jpg'),
     ('Globo de Helio', 3.00, 'Globo de helio en forma de corazón', 'Cumpleaños', 'Globos', '11', '2', 'globo_helio.jpg'),
     ('Plato de Cumpleaños 20 cm', 4.00, 'Plato de cumpleaños de 20 cm de color azul', 'Cumpleaños', 'Platos', '11', '3', 'plato_cumpleanos_20.jpg'),
     ('Vaso de Cumpleaños 250 ml', 3.00, 'Vaso de cumpleaños de 250 ml de color verde', 'Cumpleaños', 'Vasos', '11', '4', 'vaso_cumpleanos_250.jpg'),

@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -30,5 +31,11 @@ public class ProductoController {
         Optional<Producto> producto = productoService.getProductoById(id);
         return producto.map(ResponseEntity::ok)
                        .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/categoria")
+    public ResponseEntity<List<Producto>> getProductosByCategoria(@RequestParam String categoria) {
+        List<Producto> productos = productoService.getProductosByCategoria(categoria);
+        return ResponseEntity.ok(productos);
     }
 }
