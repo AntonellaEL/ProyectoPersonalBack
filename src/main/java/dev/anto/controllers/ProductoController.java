@@ -50,6 +50,12 @@ public class ProductoController {
         @RequestParam String categoria, @RequestParam String subcategoria) {
     List<Producto> productos = productoService.getProductosByCategoriaYSubcategoria(categoria, subcategoria);
     return ResponseEntity.ok(productos);
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Producto>> searchProductsByName(@RequestParam String nombre) {
+    List<Producto> productos = productoService.searchProductsByName(nombre);
+    return ResponseEntity.ok(productos);
 }
 
 }

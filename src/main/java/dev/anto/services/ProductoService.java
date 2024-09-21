@@ -32,5 +32,10 @@ public class ProductoService {
     public List<Producto> getProductosByCategoriaYSubcategoria(String categoria, String subcategoria) {
         return productoRepository.findByCategoriaAndSubcategoria(categoria, subcategoria);
     }
-    
+
+    public List<Producto> searchProductsByName(String nombre) {
+        return productoRepository.findByNameContaining(nombre);
+
+
+    }
 }
