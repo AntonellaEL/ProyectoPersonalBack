@@ -38,4 +38,10 @@ public class ProductoController {
         List<Producto> productos = productoService.getProductosByCategoria(categoria);
         return ResponseEntity.ok(productos);
     }
+
+    @GetMapping("/subcategorias")
+    public ResponseEntity<List<String>> getSubcategoriasByCategoria(@RequestParam String categoria) {
+        List<String> subcategorias = productoService.getSubcategoriasByCategoria(categoria);
+        return ResponseEntity.ok(subcategorias);
+    }
 }

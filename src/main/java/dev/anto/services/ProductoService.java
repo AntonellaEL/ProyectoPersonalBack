@@ -25,4 +25,7 @@ public class ProductoService {
     public List<Producto> getProductosByCategoria(String categoria) {
         return productoRepository.findByCategoriaIgnoreCase(categoria);
     }
+    public List<String> getSubcategoriasByCategoria(String categoria) {
+        return productoRepository.findDistinctSubcategoriaByCategoria(categoria);
+    }
 }
