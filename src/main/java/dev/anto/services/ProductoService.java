@@ -28,4 +28,9 @@ public class ProductoService {
     public List<String> getSubcategoriasByCategoria(String categoria) {
         return productoRepository.findDistinctSubcategoriaByCategoria(categoria);
     }
+
+    public List<Producto> getProductosByCategoriaYSubcategoria(String categoria, String subcategoria) {
+        return productoRepository.findByCategoriaAndSubcategoria(categoria, subcategoria);
+    }
+    
 }

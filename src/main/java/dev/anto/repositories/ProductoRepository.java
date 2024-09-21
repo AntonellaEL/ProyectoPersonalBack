@@ -11,4 +11,8 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
     
     @Query("SELECT DISTINCT p.subcategoria FROM Producto p WHERE p.categoria = ?1")
     List<String> findDistinctSubcategoriaByCategoria(String categoria);
+
+    @Query("SELECT p FROM Producto p WHERE p.categoria = ?1 AND p.subcategoria = ?2")
+    List<Producto> findByCategoriaAndSubcategoria(String categoria, String subcategoria);
+
 }
