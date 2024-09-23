@@ -52,6 +52,7 @@ public class SecurityConfig {
         .authorizeHttpRequests(auth -> auth
             .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
             .requestMatchers(HttpMethod.GET, endpoint + "/productos/**").permitAll()
+            .requestMatchers(HttpMethod.POST, endpoint + "/productos").hasAnyRole("ADMIN")
             .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("ADMIN")
             .anyRequest().authenticated())
 
@@ -79,13 +80,13 @@ public class SecurityConfig {
         }
 
 
-    @Bean
-    PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    Base64Encoder base64Encoder() {
-        return new Base64Encoder();
-    }
+        @Bean
+        public PasswordEncoder passwordEncoder() {
+            return new BCryptPasswordEncoder();
+        }
+    
+        @Bean
+        public Base64Encoder base64Encoder() {
+            return new Base64Encoder();
+        }
 }

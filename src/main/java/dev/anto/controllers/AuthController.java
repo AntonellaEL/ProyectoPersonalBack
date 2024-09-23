@@ -30,44 +30,27 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-
 @RequestMapping(path = "${api-endpoint}")
 
 public class AuthController {
-
-
-
 
     @GetMapping(path = "/login")
 
     public ResponseEntity<Map<String, String>> login() {
 
-
-
-
         SecurityContext contextHolder = SecurityContextHolder.getContext();
-
         Authentication auth = contextHolder.getAuthentication();
-
-
-
 
         Map<String,String> json = new HashMap<>();
 
         json.put("message", "Logged");
-
         json.put("username", auth.getName());
-
         json.put("roles", auth.getAuthorities().iterator().next().toString());
-
-
 
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(json);
 
     }
-
-
 
 
 }
