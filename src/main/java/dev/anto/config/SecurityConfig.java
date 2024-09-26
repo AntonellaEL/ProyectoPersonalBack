@@ -15,79 +15,64 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import dev.anto.facades.encryptations.Base64Encoder;
 import dev.anto.services.JpaUserDetailsService;
-
 import org.springframework.http.HttpMethod;
-
-
 import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Value;
-
 @Configuration
 @EnableWebSecurity
-
 public class SecurityConfig {
 
     @Value("${api-endpoint}")
     String endpoint;
 
     MyBasicAuthenticationEntryPoint myBasicAuthenticationEntryPoint;
-
     JpaUserDetailsService jpaUserDetailsService;
-
 
     public SecurityConfig(JpaUserDetailsService jpaUserDetailsService, MyBasicAuthenticationEntryPoint basicEntryPoint) {
         this.jpaUserDetailsService = jpaUserDetailsService;
         this.myBasicAuthenticationEntryPoint = basicEntryPoint;
+    }
 
-}
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-
         http
-        .cors(cors -> cors.configurationSource(corsConfiguration()))
-        .csrf(csrf -> csrf.disable())
-        .formLogin(form -> form.disable())
-
-        .authorizeHttpRequests(auth -> auth
-            .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
-            .requestMatchers(HttpMethod.GET, endpoint + "/productos/**").permitAll()
-            .requestMatchers(HttpMethod.POST, endpoint + "/productos").hasAnyRole("ADMIN")
-            .requestMatchers(HttpMethod.DELETE, endpoint + "/productos/**").hasAnyRole("ADMIN")
-            .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("ADMIN")
-            .anyRequest().authenticated())
-
-        .userDetailsService(jpaUserDetailsService)
-        .httpBasic(basic-> basic.authenticationEntryPoint(myBasicAuthenticationEntryPoint))
-        .sessionManagement(session -> session
-        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));
+            .cors(cors -> cors.configurationSource(corsConfiguration())) 
+            .csrf(csrf -> csrf.disable())
+            .formLogin(form -> form.disable())
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
+                .requestMatchers(HttpMethod.GET, endpoint + "/productos/**").permitAll()
+                .requestMatchers(HttpMethod.GET, endpoint + "/login").hasRole("ADMIN") 
+                .requestMatchers(HttpMethod.POST, endpoint + "/productos").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.DELETE, endpoint + "/productos/**").hasRole("ADMIN")
+                .anyRequest().authenticated())
+            .userDetailsService(jpaUserDetailsService)
+            .httpBasic(basic -> basic.authenticationEntryPoint(myBasicAuthenticationEntryPoint))
+            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         http.headers(header -> header.frameOptions(frame -> frame.sameOrigin()));
-
         return http.build();
     }
 
-      @Bean
-        CorsConfigurationSource corsConfiguration() {
-                CorsConfiguration configuration = new CorsConfiguration();
-                configuration.setAllowCredentials(true);
-                configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173"));
-                configuration.setAllowedMethods(Arrays.asList("GET","POST", "PUT", "DELETE"));
-                configuration.setAllowedHeaders(Arrays.asList("Authorization"));
+    @Bean
+    CorsConfigurationSource corsConfiguration() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowCredentials(true);
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173")); 
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")); 
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type")); 
 
-                UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-                source.registerCorsConfiguration("/**", configuration);
-                return source;
-        }
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
 
-
-        @Bean
-        public PasswordEncoder passwordEncoder() {
-            return new BCryptPasswordEncoder();
-        }
-    
-        @Bean
-        public Base64Encoder base64Encoder() {
-            return new Base64Encoder();
-        }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+    @Bean
+    public Base64Encoder base64Encoder() {
+        return new Base64Encoder();
+    }
 }
