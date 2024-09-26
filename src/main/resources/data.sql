@@ -2,7 +2,7 @@
 INSERT INTO roles (id_role, name) VALUES (default, 'ROLE_ADMIN');
 
 /* Users */
-INSERT INTO users (id_user, username, password) VALUES (default, 'Agus', '$2a$12$/ELCPfMlFCh4MI0AJjDOoOIuNC3MoiAKUtLEJKogi17oZmC8hZaIS');
+INSERT INTO users (id_user, username, password) VALUES (default, 'Agus', '$2a$12$aIkaVHk0X8BCTIxVc4W4w.dxn6ULfsk1PRzrMyYw0gYRbSs7kEjCm');
 
 INSERT INTO roles_users (role_id, user_id) VALUES (1, 1);
 
