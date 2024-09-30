@@ -44,6 +44,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET, endpoint + "/productos/**").permitAll()
                 .requestMatchers(HttpMethod.GET, endpoint + "/login").hasRole("ADMIN") 
                 .requestMatchers(HttpMethod.POST, endpoint + "/productos").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.PUT, endpoint + "/productos").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.DELETE, endpoint + "/productos/**").hasRole("ADMIN")
                 .anyRequest().authenticated())
             .userDetailsService(jpaUserDetailsService)
