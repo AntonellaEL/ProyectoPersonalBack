@@ -46,28 +46,12 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, endpoint + "/productos").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.PUT, endpoint + "/productos").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.DELETE, endpoint + "/productos/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.POST, endpoint + "/images").hasRole("ADMIN")
                 .anyRequest().authenticated())
             .userDetailsService(jpaUserDetailsService)
             .httpBasic(basic -> basic.authenticationEntryPoint(myBasicAuthenticationEntryPoint))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));
-        .cors(cors -> cors.configurationSource(corsConfiguration()))
-        .csrf(csrf -> csrf.disable())
-        .formLogin(form -> form.disable())
-
-        .authorizeHttpRequests(auth -> auth
-            .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
-            .requestMatchers(HttpMethod.GET, endpoint + "/productos/**").permitAll()
-            .requestMatchers(HttpMethod.POST, endpoint + "/productos").hasAnyRole("ADMIN")
-            .requestMatchers(HttpMethod.POST, endpoint + "/images").hasRole("ADMIN")
-            .requestMatchers(HttpMethod.DELETE, endpoint + "/productos/**").hasAnyRole("ADMIN")
-            .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("ADMIN")
-            .anyRequest().authenticated())
-
-        .userDetailsService(jpaUserDetailsService)
-        .httpBasic(basic-> basic.authenticationEntryPoint(myBasicAuthenticationEntryPoint))
-        .sessionManagement(session -> session
-        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));
-
+        
         http.headers(header -> header.frameOptions(frame -> frame.sameOrigin()));
         return http.build();
     }
