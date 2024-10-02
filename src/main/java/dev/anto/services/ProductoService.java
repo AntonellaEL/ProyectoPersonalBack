@@ -2,6 +2,8 @@ package dev.anto.services;
 
 import dev.anto.models.Producto;
 import dev.anto.repositories.ProductoRepository;
+import jakarta.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +43,26 @@ public class ProductoService {
     public Producto createProducto(Producto producto) {
         return productoRepository.save(producto);
     }
+
+    public Producto updateProducto(Long id, Producto producto) {
+    Optional<Producto> existingProducto = productoRepository.findById(id);
+    
+    if (existingProducto.isPresent()) {
+        Producto productoToUpdate = existingProducto.get();
+        productoToUpdate.setNombre(producto.getNombre());
+        productoToUpdate.setPrecio(producto.getPrecio());
+        productoToUpdate.setDescripcion(producto.getDescripcion());
+        productoToUpdate.setCategoria(producto.getCategoria());
+        productoToUpdate.setSubcategoria(producto.getSubcategoria());
+        productoToUpdate.setPasillo(producto.getPasillo());
+        productoToUpdate.setEstanteria(producto.getEstanteria());
+        productoToUpdate.setImg(producto.getImg());
+        return productoRepository.save(productoToUpdate);
+    } else {
+        throw new EntityNotFoundException("Producto no encontrado");
+    }
+}
+
 
     public void deleteProducto(Long id) {
         productoRepository.deleteById(id);
