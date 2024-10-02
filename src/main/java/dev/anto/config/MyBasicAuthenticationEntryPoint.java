@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+
 @Component
 public class MyBasicAuthenticationEntryPoint extends BasicAuthenticationEntryPoint {
 
@@ -22,6 +23,10 @@ public class MyBasicAuthenticationEntryPoint extends BasicAuthenticationEntryPoi
         writer.println("HTTP Status 401 - " + authException.getMessage());
     }
 
-    
+    @Override
+    public void afterPropertiesSet() {
+        setRealmName("Anto");
+        super.afterPropertiesSet();
+    }
 
 }
