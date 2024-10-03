@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Lob;
+
 
 @Entity
 @Table(name = "producto")
@@ -20,6 +22,8 @@ public class Producto {
     protected String subcategoria;
     protected String pasillo;
     protected String estanteria;
+
+    @Lob
     protected String img;
 
     public Producto(){}
