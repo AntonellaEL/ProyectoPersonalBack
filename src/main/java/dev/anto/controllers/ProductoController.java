@@ -1,5 +1,6 @@
 package dev.anto.controllers;
 
+import dev.anto.firebase.UploadService;
 import dev.anto.models.Producto;
 import dev.anto.services.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+import java.io.IOException;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -24,6 +28,9 @@ public class ProductoController {
 
     @Autowired
     private ProductoService productoService;
+
+    @Autowired
+    private UploadService uploadService;
 
     @GetMapping
     public ResponseEntity<List<Producto>> getAllProductos() {
@@ -87,6 +94,28 @@ public class ProductoController {
     public ResponseEntity<Void> deleteProducto(@PathVariable Long id) {
         productoService.deleteProducto(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{id}/imagen")
+    public ResponseEntity<String> uploadImage(@PathVariable Long id, @RequestParam("file") MultipartFile file) {
+        Optional<Producto> productoOptional = productoService.getProductoById(id);
+        if (!productoOptional.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Producto producto = productoOptional.get();
+
+        try {
+            // Subir la imagen a Firebase
+            String fileUrl = uploadService.uploadFileToFirebaseAndSaveRecord(file);
+            producto.setImg(fileUrl); // Actualizar el campo de imagen
+            productoService.updateProducto(id, producto); // Guarda el producto con la nueva imagen
+
+            return ResponseEntity.ok("Imagen subida exitosamente. URL: " + fileUrl);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body("Error al subir la imagen.");
+        }
     }
 
 }
