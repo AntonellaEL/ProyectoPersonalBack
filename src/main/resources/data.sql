@@ -157,25 +157,25 @@ VALUES
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
     ('Escoba de Cerdas', 15.00, 'Escoba de cerdas para barrer', 'Limpieza', 'Escobas', '9', '1', 'https://cdn.pixabay.com/photo/2016/11/19/00/17/broom-1837434_1280.jpg'),
-    ('Mopa de Microfibra', 20.00, 'Mopa de microfibra con mango ajustable', 'Limpieza', 'Mopas', '9', '2', 'mopa_microfibra.jpg'),
-    ('Cubo de Fregona', 18.00, 'Cubo de fregona con exprimidor', 'Limpieza', 'Cubos', '9', '3', 'cubo_fregona.jpg'),
-    ('Detergente Multiuso', 8.00, 'Detergente multiuso para diversas superficies', 'Limpieza', 'Detergentes', '9', '4', 'detergente_multiuso.jpg'),
-    ('Limpiador de Vidrios', 7.00, 'Limpiador de vidrios en aerosol', 'Limpieza', 'Limpiadores', '9', '5', 'limpiador_vidrios.jpg'),
-    ('Esponja Antimicrobiana', 4.00, 'Esponja antimicrobiana para lavar platos', 'Limpieza', 'Esponjas', '9', '6', 'esponja_antimicrobiana.jpg'),
-    ('Cepillo de Mano', 6.00, 'Cepillo de mano para limpieza profunda', 'Limpieza', 'Cepillos', '9', '7', 'cepillo_mano.jpg'),
-    ('Guantes de Limpieza', 5.00, 'Guantes de limpieza de látex', 'Limpieza', 'Guantes', '9', '8', 'guantes_limpieza.jpg'),
-    ('Paño de Microfibra', 3.00, 'Paño de microfibra para limpieza', 'Limpieza', 'Paños', '9', '9', 'pano_microfibra.jpg'),
-    ('Desinfectante en Spray', 9.00, 'Desinfectante en spray para superficies', 'Limpieza', 'Desinfectantes', '9', '10', 'desinfectante_spray.jpg'),
-    ('Limpiador de Pisos', 12.00, 'Limpiador de pisos concentrado', 'Limpieza', 'Limpiadores', '9', '11', 'limpiador_pisos.jpg'),
-    ('Aspiradora de Mano', 45.00, 'Aspiradora de mano compacta', 'Limpieza', 'Aspiradoras', '9', '12', 'aspiradora_mano.jpg'),
-    ('Fregona de Algodón', 14.00, 'Fregona de algodón con mango de madera', 'Limpieza', 'Fregonas', '9', '13', 'fregona_algodon.jpg'),
-    ('Cepillo de Ropa', 5.00, 'Cepillo de ropa con cerdas suaves', 'Limpieza', 'Cepillos', '9', '14', 'cepillo_ropa.jpg'),
-    ('Limpiador de Sanitarios', 6.00, 'Limpiador de sanitarios en gel', 'Limpieza', 'Limpiadores', '9', '15', 'limpiador_sanitarios.jpg'),
-    ('Guantes de Protección', 7.00, 'Guantes de protección para limpieza pesada', 'Limpieza', 'Guantes', '9', '16', 'guantes_proteccion.jpg'),
-    ('Escoba de Polvo', 13.00, 'Escoba de polvo con mango extensible', 'Limpieza', 'Escobas', '9', '17', 'escoba_polvo.jpg'),
-    ('Limpiador de Olores', 8.00, 'Limpiador de olores para superficies', 'Limpieza', 'Desinfectantes', '9', '18', 'limpiador_olores.jpg'),
-    ('Paño Antibacteriano', 4.00, 'Paño antibacteriano para limpieza', 'Limpieza', 'Paños', '9', '19', 'pano_antibacteriano.jpg'),
-    ('Esponja de Cocina', 3.00, 'Esponja de cocina para lavar platos', 'Limpieza', 'Esponjas', '9', '20', 'esponja_cocina.jpg');
+    ('Mopa de Microfibra', 20.00, 'Mopa de microfibra con mango ajustable', 'Limpieza', 'Mopas', '9', '2', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FMopa%20de%20microfibra%20con%20mango%20ajustable.jpg?alt=media&token=a707d604-4db6-4b3a-a28e-50f799ab4bdf'),
+    ('Cubo de Fregona', 18.00, 'Cubo de fregona con exprimidor', 'Limpieza', 'Cubos', '9', '3', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FCubo%20de%20fregona%20con%20exprimidor.jpg?alt=media&token=faca205f-8746-4715-8dea-11d0434ce118'),
+    ('Detergente Multiuso', 8.00, 'Detergente multiuso para diversas superficies', 'Limpieza', 'Detergentes', '9', '4', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FDetergente%20multiuso%20para%20diversas%20superficies.jpg?alt=media&token=85296b95-1975-4058-9eae-ee33549bb84e'),
+    ('Limpiador de Vidrios', 7.00, 'Limpiador de vidrios en aerosol', 'Limpieza', 'Limpiadores', '9', '5', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FLimpiador%20de%20vidrios%20en%20aerosol.jpg?alt=media&token=63e78f7f-16eb-4d46-a4ee-f17dd7b66894'),
+    ('Esponja Antimicrobiana', 4.00, 'Esponja antimicrobiana para lavar platos', 'Limpieza', 'Esponjas', '9', '6', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FEsponja%20antimicrobiana%20para%20lavar%20platos.jpg?alt=media&token=4c7c4dd4-cca5-48bc-a9af-367f5c51cb89'),
+    ('Cepillo de Mano', 6.00, 'Cepillo de mano para limpieza profunda', 'Limpieza', 'Cepillos', '9', '7', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FCepillo%20de%20mano%20para%20limpieza%20profunda.jpg?alt=media&token=69dc4616-ae0f-4ce3-a5c1-8ab80e36f710'),
+    ('Guantes de Limpieza', 5.00, 'Guantes de limpieza de látex', 'Limpieza', 'Guantes', '9', '8', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FGuantes%20de%20limpieza%20de%20l%C3%A1tex.jpg?alt=media&token=c51e8da1-90d6-422a-b392-0281de8c9a9b'),
+    ('Paño de Microfibra', 3.00, 'Paño de microfibra para limpieza', 'Limpieza', 'Paños', '9', '9', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FPa%C3%B1o%20de%20microfibra%20para%20limpieza.jpg?alt=media&token=6fd2342a-82c0-4e7a-bcae-0ed82b0ac5f2'),
+    ('Desinfectante en Spray', 9.00, 'Desinfectante en spray para superficies', 'Limpieza', 'Desinfectantes', '9', '10', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FDesinfectante%20en%20spray%20para%20superficies.jpg?alt=media&token=262e3860-8179-438e-84d5-e2db8551a057'),
+    ('Limpiador de Pisos', 12.00, 'Limpiador de pisos concentrado', 'Limpieza', 'Limpiadores', '9', '11', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FLimpiador%20de%20olores%20para%20superficies.jpg?alt=media&token=f352bcbf-c2ed-48cb-82a9-86ca783e3cfc'),
+    ('Aspiradora de Mano', 45.00, 'Aspiradora de mano compacta', 'Limpieza', 'Aspiradoras', '9', '12', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FAspiradora%20de%20mano%20compacta.jpg?alt=media&token=0e25fb18-592b-43fa-908d-ded28e00b750'),
+    ('Fregona de Algodón', 14.00, 'Fregona de algodón con mango de madera', 'Limpieza', 'Fregonas', '9', '13', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FFregona%20de%20algod%C3%B3n%20con%20mango%20de%20madera.jpg?alt=media&token=14922171-f0c9-4538-9a8f-e5647a174f9c'),
+    ('Cepillo de Ropa', 5.00, 'Cepillo de ropa con cerdas suaves', 'Limpieza', 'Cepillos', '9', '14', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FCepillo%20de%20ropa%20con%20cerdas%20suaves.jpg?alt=media&token=d8b871b3-4184-4305-9c5d-2022567eea6e'),
+    ('Limpiador de Sanitarios', 6.00, 'Limpiador de sanitarios en gel', 'Limpieza', 'Limpiadores', '9', '15', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FLimpiador%20de%20sanitarios%20en%20gel.jpg?alt=media&token=b6c6cb63-3b80-40cc-8952-2699d4f1188e'),
+    ('Guantes de Protección', 7.00, 'Guantes de protección para limpieza pesada', 'Limpieza', 'Guantes', '9', '16', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FGuantes%20de%20protecci%C3%B3n%20para%20limpieza%20pesada.jpg?alt=media&token=f81454c8-f0b7-4162-bae9-7c161a29709e'),
+    ('Escoba de Polvo', 13.00, 'Escoba de polvo con mango extensible', 'Limpieza', 'Escobas', '9', '17', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FEscoba%20de%20polvo%20con%20mango%20extensible.jpg?alt=media&token=977c3b60-1ec5-4b1e-aa27-61767332f3fa'),
+    ('Limpiador de Olores', 8.00, 'Limpiador de olores para superficies', 'Limpieza', 'Desinfectantes', '9', '18', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FLimpiador%20de%20pisos%20concentrado.jpg?alt=media&token=6f590e9b-1bf5-413c-8c06-4af1a18b7a68'),
+    ('Paño Antibacteriano', 4.00, 'Paño antibacteriano para limpieza', 'Limpieza', 'Paños', '9', '19', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2FPa%C3%B1o%20antibacteriano%20para%20limpieza.jpg?alt=media&token=60aa1316-3e65-4ad1-98c6-f93a9ac7de15'),
+    ('Esponja de Cocina', 3.00, 'Esponja de cocina para lavar platos', 'Limpieza', 'Esponjas', '9', '20', 'https://firebasestorage.googleapis.com/v0/b/proyect-fib.appspot.com/o/products%2F91d7De6gxvL._AC_UL320_.jpg?alt=media&token=ba926edf-6e18-4c00-86a2-9f39679d94ab');
 
 -- Pasillo 10: Disfraces
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
@@ -225,7 +225,7 @@ VALUES
     ('Vela de Cumpleaños Número 9', 2.00, 'Vela de cumpleaños número 9 de color morado', 'Cumpleaños', 'Velas', '11', '19', 'vela_numero_9.jpg'),
     ('Globo de Cumpleaños en Forma de Corazón', 2.50, 'Globo de cumpleaños en forma de corazón de color dorado', 'Cumpleaños', 'Globos', '11', '20', 'globo_corazon_dorado.jpg');
 
- Pasillo 4: Material Escolar
+ -- Pasillo 4: Material Escolar
 INSERT INTO producto (nombre, precio, descripcion, categoria, subcategoria, pasillo, estanteria, img)
 VALUES 
     ('Libreta de Notas', 3.50, 'Libreta con hojas rayadas', 'Escolar', 'Libretas', '4', '1', 'https://cdn.pixabay.com/photo/2016/09/26/09/59/school-supplies-1695564_1280.jpg'),
