@@ -1,0 +1,114 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------------< dev.:anto >------------------------------
+[INFO] Building ProyectoPersonal 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.9:run (default-cli) > test-compile @ anto >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ anto ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ anto ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ anto ---
+[INFO] skip non existing resourceDirectory C:\Users\anton\Desktop\Factoriaf5\Miproyecto\anto\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ anto ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.9:run (default-cli) < test-compile @ anto <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.9:run (default-cli) @ anto ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.9)
+
+2026-02-16T16:59:38.528+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] dev.anto.ProyectoPersonalApplication     : Starting ProyectoPersonalApplication using Java 21.0.3 with PID 14480 (C:\Users\anton\Desktop\Factoriaf5\Miproyecto\anto\target\classes started by anton in C:\Users\anton\Desktop\Factoriaf5\Miproyecto\anto)
+2026-02-16T16:59:38.531+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] dev.anto.ProyectoPersonalApplication     : The following 1 profile is active: "h2"
+2026-02-16T16:59:38.566+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-16T16:59:38.567+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-16T16:59:39.082+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-16T16:59:39.129+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+2026-02-16T16:59:39.616+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-16T16:59:39.629+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-16T16:59:39.629+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2026-02-16T16:59:39.674+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-16T16:59:39.675+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1107 ms
+2026-02-16T16:59:39.695+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-16T16:59:39.843+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:dcbapp user=ADMIN
+2026-02-16T16:59:39.844+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-16T16:59:39.852+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dcbapp'
+2026-02-16T16:59:39.947+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16T16:59:39.989+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2026-02-16T16:59:40.015+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-16T16:59:40.207+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-16T16:59:40.243+01:00  WARN 14480 --- [ProyectoPersonal] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16T16:59:40.977+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table filerecords (
+        id bigint generated by default as identity,
+        file_name varchar(255),
+        file_size bigint,
+        file_url varchar(10000),
+        primary key (id)
+    )
+Hibernate: 
+    create table producto (
+        id bigint generated by default as identity,
+        categoria varchar(255),
+        descripcion varchar(255),
+        estanteria varchar(255),
+        img clob,
+        nombre varchar(255),
+        pasillo varchar(255),
+        precio float(53) not null,
+        subcategoria varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table roles (
+        id_role bigint generated by default as identity,
+        name varchar(255),
+        primary key (id_role)
+    )
+Hibernate: 
+    create table roles_users (
+        user_id bigint not null,
+        role_id bigint not null,
+        primary key (user_id, role_id)
+    )
+Hibernate: 
+    create table users (
+        id_user bigint generated by default as identity,
+        password varchar(255),
+        username varchar(255),
+        primary key (id_user)
+    )
+Hibernate: 
+    alter table if exists roles_users 
+       add constraint FKsmos02hm32191ogexm2ljik9x 
+       foreign key (role_id) 
+       references roles
+Hibernate: 
+    alter table if exists roles_users 
+       add constraint FKlkcn1l0gnfshcn4rnmak73ta 
+       foreign key (user_id) 
+       references users
+2026-02-16T16:59:41.031+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T16:59:41.255+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-16T16:59:41.619+01:00  WARN 14480 --- [ProyectoPersonal] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-16T16:59:41.821+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e271c36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d797253, org.springframework.security.web.context.SecurityContextHolderFilter@4c7e2da3, org.springframework.security.web.header.HeaderWriterFilter@4a566852, org.springframework.web.filter.CorsFilter@761ca3e5, org.springframework.security.web.authentication.logout.LogoutFilter@41870a44, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@63a81aa3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c419096, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@415d6e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@543edf50, org.springframework.security.web.session.SessionManagementFilter@5546d74f, org.springframework.security.web.access.ExceptionTranslationFilter@5eaa9075, org.springframework.security.web.access.intercept.AuthorizationFilter@4a36c5a]
+2026-02-16T16:59:42.022+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-16T16:59:42.047+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-02-16T16:59:42.053+01:00  INFO 14480 --- [ProyectoPersonal] [  restartedMain] dev.anto.ProyectoPersonalApplication     : Started ProyectoPersonalApplication in 3.827 seconds (process running for 4.242)
