@@ -11,14 +11,16 @@ import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.FirebaseApp;
 import java.io.FileInputStream;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 
 @Configuration
 public class FirebaseConfig {
 
-    @Value("${google-app-credentials}")
+    @Value("${google-app-credentials:}")
     private String googleCredentialsPath;
 
     @Bean(name = "firebase")
+    @ConditionalOnExpression("'${google-app-credentials:}'.length() > 0")
     public FirebaseApp initFirebaseApp() throws IOException {
 
         FileInputStream refreshToken = new FileInputStream(googleCredentialsPath);
